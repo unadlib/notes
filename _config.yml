@@ -9,10 +9,11 @@ description:
 author: unadlib
 language: zh-Hans
 timezone:
+avatar: /images/avatar.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://unadlib.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

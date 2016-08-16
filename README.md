@@ -1,20 +1,24 @@
 # unadlib's GitHub Page
 
-[View](https://unadlib.github.io/)
+<a href="https://unadlib.github.io/" target="_blank">[ View ]</a>
 
 ## Installation
 
-Hexo.
+Hexo
 
 ```
 npm install
 ```
 
-Hexo Theme [NexT](http://theme-next.iissnan.com/)
+Hexo Theme <a href="http://theme-next.iissnan.com/" target="_blank">NexT</a>
 ```
 git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
 ## Theme Config
-```
+```yml
 scheme: Pisces
+```
+## Update Note
+```
+hexo clean && hexo g -d
 ```
