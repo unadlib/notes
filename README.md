@@ -1,18 +1,20 @@
-# 个人[GitHub Page]
+# unadlib's GitHub Page
 
-## 使用配置
+[View](unadlib.github.io)
 
-采用Hexo.
+## Installation
+
+Hexo.
 
 ```
 npm install
 ```
 
-采用主题[NexT](http://theme-next.iissnan.com/)
+Hexo Theme[NexT](http://theme-next.iissnan.com/)
 ```
 git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
-## 主题配置
+## Theme Config
 ```
 scheme: Pisces
 ```
