@@ -24,6 +24,7 @@ categories: ${categories}
 tags: [${tags}]
 toc: ${isTocAllowed}
 feature: ${thumbnails_url}
+---
 ```
 注意:
 ```
