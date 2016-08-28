@@ -1,9 +1,10 @@
 title: 跨域
 date: 2016-08-28 14:13:31
 description: 
-categories: 
-tags: [] 
-toc: 
+categories: 前端开发
+tags:
+  - CORS
+toc:
 feature:
 ---
 跨域是指不同域之间的网络传输和数据交换,基于互联网的多样性和开放性进行限制的同源策略,即页面之间拥有相同的协议（protocol）,端口（如果指定,但IE例外）和主机.

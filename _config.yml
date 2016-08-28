@@ -4,12 +4,13 @@
 
 # Site
 title: unadlib's Notes
-subtitle:
-description:
+subtitle: something else
+description: coder or programmer?
 author: unadlib
 language: zh-Hans
 timezone:
 avatar: /images/avatar.jpg
+disqus_shortname: unadlib
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -65,7 +66,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

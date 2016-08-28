@@ -1,12 +1,13 @@
 title: 创建笔记
 date: 2016-08-15 14:07:32
 description: 
-categories: 
-tags: [] 
+categories: 其他
+tags:
+  - GitHub
 toc: 
 feature: 
 ---
-有时候看了点东西,总想找个地方系统记录一下,hexo是各方不错的GitHub Pages选择,不少人推荐[Travis CI](https://travis-ci.org/)自动更新,下次有机会再倒腾.
+有时候看了点东西,总想找个地方系统记录一下,[Hexo](https://hexo.io/)是各方不错的GitHub Pages选择,不少人推荐[Travis CI](https://travis-ci.org/)自动更新,下次有机会再倒腾.
 配置过程:
 ```
 npm install -g hexo-cli
@@ -15,10 +16,18 @@ cd <your-hexo-folder>
 hexo new [layout] <title>
 hexo clean && hexo g -d
 ```
+这次使用next主题
+```
+cd <your-hexo-folder>
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+vim .gitignore
+themes/next/*
+!themes/next/_config.yml
+```
 使用Jetbrains IDE设置 Settings > Editor > File and code Templates:
 ```
 title: ${title}
-date: ${YEAR}-${MONTH}-${DAY} ${HOUR}:${MINUTE}:${SECOND}
+date: ${YEAR}-${MONTH}-${DAY} ${HOUR}:${MINUTE}:00
 description: ${description}
 categories: ${categories}
 tags: [${tags}]
