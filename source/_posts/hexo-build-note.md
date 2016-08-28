@@ -1,5 +1,5 @@
 title: 创建笔记
-date: 2016-08-15 14:07:31
+date: 2016-08-15 14:07:32
 description: 
 categories: 
 tags: [] 
@@ -14,6 +14,16 @@ hexo init <your-hexo-folder>
 cd <your-hexo-folder>
 hexo new [layout] <title>
 hexo clean && hexo g -d
+```
+使用Jetbrains IDE设置 Settings > Editor > File and code Templates:
+```
+title: ${title}
+date: ${YEAR}-${MONTH}-${DAY} ${HOUR}:${MINUTE}:${SECOND}
+description: ${description}
+categories: ${categories}
+tags: [${tags}]
+toc: ${isTocAllowed}
+feature: ${thumbnails_url}
 ```
 注意:
 ```
