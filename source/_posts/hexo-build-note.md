@@ -28,4 +28,11 @@ feature: ${thumbnails_url}
 注意:
 ```
 ssh-key已经添加到github,否则hexo deploy将失败.
+若在mac下bash访问github比较慢
+brew install proxychains-ng
+编辑配置文件 vim /usr/local/etc/proxychains.conf
+安装完成proxychains
+终端输入:proxychains4 bash
+即完成终端全局代理
 ```
+PS:OSX 10.11+ proxychains无写入权限[请暂时关闭SIP](http://osxdaily.com/2015/10/05/disable-rootless-system-integrity-protection-mac-os-x/)
