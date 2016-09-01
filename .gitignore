@@ -5,7 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
-.idea/workspace.xml
-.idea/vcs.xml
+.idea/
+.idea/*
+.idea*
 themes/next/
-!themes/next/_config.yml
