@@ -18,11 +18,11 @@ hexo clean && hexo g -d
 ```
 这次使用next主题
 ```
+fork theme form https://github.com/iissnan/hexo-theme-next
 cd <your-hexo-folder>
-git clone https://github.com/iissnan/hexo-theme-next themes/next
+git clone https://github.com/unadlib/hexo-theme-next themes/next
 vim .gitignore
-themes/next/*
-!themes/next/_config.yml
+themes/
 ```
 使用Jetbrains IDE设置 Settings > Editor > File and code Templates:
 ```
