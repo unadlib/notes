@@ -12,30 +12,26 @@ feature:
 
 ### 启动过程
 原源码接近3W行,整体启动过程:
-1. 检查angular.bootstrap
-angular外面启动核心接口
+* 1.检查angular.bootstrap
 ```
 if (window.angular.bootstrap) {
   console.log('WARNING: Tried to load angular more than once.');
   return;
 }
 ```
-angular.bootstrap保证引导启动angular项目且防止被多个实例重复引导启动.
-2. 绑定jqLite
-angular内部实现了精简版的jQ核心功能,如果jQuery优先于angular载入,则使用jQuery,否则使用其内部实现的jqLite.
+angular外面启动核心接口,angular.bootstrap保证引导启动angular项目且防止被多个实例重复引导启动.
+* 2.绑定jqLite
 ```
 bindJQuery();
-```
-```
+
 angular.element = jqLite;//完成绑定
 bindJQueryFired = true;//防止重绑
 ```
-3. 载入angular所有外部接口
+angular内部实现了精简版的jQ核心功能,如果jQuery优先于angular载入,则使用jQuery,否则使用其内部实现的jqLite.
+* 3.载入angular所有外部接口
 ```
 publishExternalAPI(angular);
-```
 
-```
 function publishExternalAPI(angular) {
     extend(angular, {
         'bootstrap': bootstrap,
@@ -145,7 +141,7 @@ function setupModuleLoader(window) {
     })
 }
 ```
-4.利用 angular.module 载入"ngLocale"核心内置模块,并启动设置angular国际化语言设置
+* 4.利用 angular.module 载入"ngLocale"核心内置模块,并启动设置angular国际化语言设置
 ```
 angular.module("ngLocale", [], ["$provide",
 function($provide) {
@@ -155,7 +151,7 @@ function($provide) {
     });
 }]);
 ```
-5. jqLite等待dom结构载入完成并启动angular初始化
+* 5.jqLite等待dom结构载入完成并启动angular初始化
 ```
 jqLite(document).ready(function() {
     angularInit(document, bootstrap);
