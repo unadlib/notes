@@ -35,7 +35,22 @@ PS:SSE的跨域也符合CORS规则,但SSE所有微软系列浏览器均不支持
 Websocket基于单个TCP连接上的全双工通道,可双向通信的协议,本身即支持跨域请求,但默认不支持断线重连,SSE默认支持.当然,Websocket同样也有基于安全连接的wss.
 
 适用范围:IE10+
+### 1.3 Fetch
+这是新型浏览器接口标准用于替代XMLHttpRequest.
+```
+fetch(
+    'url',
+    {
+        mode: 'cors'
+    }
+)
+.then(function(response) {
+    //do something
+});
+```
+与XMLHttpRequest跨域一样,服务器需要支持预请求.
 
+适用范围:IE全系列均不支持,Edge14+
 ## 2.存储
 ### 2.1 Cookie
 跨站cookie共享方案:
@@ -183,3 +198,8 @@ document.domain = 'siteDomain.com'
 利用该原理,创建一个iframe并将数据设置为window.name中,然后跳转至父页面的本域下页面或者'about:blank'的跨域继承,并监听iframe的onload触发获取window.name.
 
 该方案的优点上全兼容,缺点是污染了全局变量.
+
+参考引用:
+* [1][https://fetch.spec.whatwg.org/](https://fetch.spec.whatwg.org/)
+* [2][https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
+* [3][https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
