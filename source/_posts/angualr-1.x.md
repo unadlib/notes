@@ -297,7 +297,7 @@ function Scope() {
 }
 ```
 基本scope核心属性包括监听相关,上下父子相邻级数据及每个闭包的$id,销毁相关.
-1. watch实现核心
+* watch实现核心
 ```
 {
     $watchGroup: function(watchExpressions, listener) {
@@ -356,7 +356,7 @@ function Scope() {
 ```
 可以看到核心的$watchGroup以组数的存储各个版本的old与new,监听变量越多,次数越多内存占用越多,影响性能,因此$watch开销较大应该尽量少用.另外,$watchCollection是监听对象或者数组的,也是基于$watchGroup.每次计数器$$watchersCount.
 
-2. $eval
+* $eval
 ```
 {
     $eval: function(expr, locals) {
@@ -449,7 +449,7 @@ function inputsWatchDelegate(scope, listener, objectEquality, parsedExpression, 
 }
 ```
 inputsWatchDelegate 完成输入脏检查后的scope更新.
-3. $digest输出脏检查
+* $digest输出脏检查
 基于$$watchers的postDigestQueue,产生队列并按队列更新
 ```
 {
