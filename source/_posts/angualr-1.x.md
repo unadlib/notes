@@ -921,4 +921,4 @@ function applyDirectivesToNode(directives, compileNode, templateAttrs, transclud
 compile与link不能共存,最后以factory形式存在
 ####  compile
 * 至上而下 compileNodes然后渲染子节点,然后applyDirectivesToNode渲染指令directive
-* service->factory->providerCache 最后所有的区块存在providerCache中.
+* service->factory->provider->providerCache 最后所有的区块存在providerCache中.
