@@ -22,8 +22,8 @@ feature:
 ### npm更换国内源
 ```
 npm config get registry
-npm config set registry http://registry.cnpmjs.org
-恢复:npm config set registry http //registry.npmjs.org/
+npm config set registry https://registry.cnpmjs.org
+恢复:npm config set registry https://registry.npmjs.org/
 ```
 ### npm发布模块
 ```
@@ -31,7 +31,17 @@ npm adduser
 npm whoami
 npm publish
 ```
-### 安装hexo
+### 安装全局模块
 ```
-sudo npm install -g hexo-cli
+sudo npm install -g hexo-cli bower grunt-cli
 ```
+### 终端SS
+```
+brew install proxychains-ng
+如果是SS客户端,默认端口1080
+/usr/local/etc/proxychains.conf (end)->socks5  127.0.0.1 9050(改成1080)
+```
+### 安装compass
+```
+sudo gem install compass
+````
