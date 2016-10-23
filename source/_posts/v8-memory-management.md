@@ -33,10 +33,12 @@ context是一个执行器环境，使用context可以将相互分离的JavaScrip
 ![image](https://raw.githubusercontent.com/unadlib/notes/master/upload/v8-memory-management1.gif)
 ### 分代策略
 **新生区，老生区，大对象区，Map区，Code区**
+
 64位环境下的V8引擎的新生代内存大小32MB、老生代内存大小为1400MB，而32位则减半，分别为16MB和700MB
 
 #### 新生区
 新生区采用半空间分配策略
+
 ![image](https://raw.githubusercontent.com/unadlib/notes/master/upload/v8-memory-management2.gif)
 
 ### 标记和清除
