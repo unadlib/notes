@@ -16,7 +16,7 @@ feature:
     //something
 }());
 ```
-分号属于两个分号都属于防御型.函数声明和函数表达式真正的区别是什么呢?
+两个分号都属于防御型.函数声明和函数表达式真正的区别是什么呢?
 ```
 function fn(){
     //This is FunctionDeclaration(函数声明)
