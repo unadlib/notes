@@ -1,4 +1,4 @@
-title: 表达式和语句
+title: 从IIFE讨论表达式和语句
 date: 2016-10-26 23:14:00
 description: 
 categories: 前端开发
@@ -42,7 +42,7 @@ null,function fn(){
 console.log(fn);
 //Uncaught ReferenceError: fn is not defined
 ```
-这里我们还要分清,语句(Statements),表达式(Expressions),表达式语句(Expression Statement).通俗点说,语句是语法,表达式是可计算的最终值(注意`=`并不属于表达式,而属于语句).
+这里我们还要分清,语句(Statements),表达式(Expressions),表达式语句(Expression Statement).通俗点说,语句是语法,表达式是由运算符(Operators)和标识符(Identifiers)组成可计算的最终值(注意`=`并不属于表达式,而属于语句).
 
 而表达式语句是不能以`{`和`function`开始的语句带表达式.详细查看[Expression Statement](http://www.ecma-international.org/ecma-262/5.1/#sec-12.4)
 ```

@@ -45,3 +45,8 @@ brew install proxychains-ng
 ```
 sudo gem install compass
 ```
+### 小版本更新后登陆节目英文
+```
+sudo languagesetup
+```
+选择中文序号,无需重启.
