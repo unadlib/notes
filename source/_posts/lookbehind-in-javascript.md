@@ -70,4 +70,4 @@ Chrome/54.0.2840.98                default: 1.36e+03ms
 Safari/10.0.1                      default: 48.115ms
 FireFox/49.0(并不支持console.time)  default: 1451ms
 ```
-同样采用NFA类型的正则引擎，JavaScriptCore与V8在这点优化上，差别那么大，有点意外；看来在，backtracking和lazy上应该有区别，有时间好看看它们之间算法；并且如果测试的字符串再长点，Chrome 就直接卡住，并且不会内存溢出，CPU温度直接飙到85摄氏度，Chrome任务管理器的当前页面进程直接100%。
+同样采用NFA类型的正则引擎，JavaScriptCore与V8在这点优化上，差别那么大，有点意外；看来在，backtracking和lazy上应该有区别，有时间好看看它们之间算法（难道是!(string.length)排列组合过大？）；并且如果测试的字符串再长点，Chrome 就直接卡住，并且不会内存溢出，CPU温度直接飙到85摄氏度，Chrome任务管理器的当前页面进程直接100%。
