@@ -39,15 +39,35 @@ node --harmony_regexp_lookbehind
 > 9. 正则表达式注释
 
 ## 实现后行断言
-[有人用正则匹配实现了一个初级的方法](https://gist.github.com/slevithan/2387872),并可以[合并到xregexp](https://github.com/beaugunderson/xregexp-lookbehind),它利用`?:`规则简单实现了compile/exec/test，以及search/match/replace/split，且不支持非后行断言起始或多组后行断言。
 
+```
+function prepareLb(lb) {
+    // Allow mode modifier before lookbehind
+    var parts = /^((?:\(\?[\w$]+\))?)\(\?<([=!])([\s\S]*)\)$/.exec(lb);
+    return {
+        // $(?!\s) allows use of (?m) in lookbehind
+        lb: XRegExp(parts ? parts[1] + "(?:" + parts[3] + ")$(?!\\s)" : lb),
+        // Positive or negative lookbehind. Use positive if no lookbehind group
+        type: parts ? parts[2] === "=" : !parts
+    };
+}
+```
+[有人用正则匹配实现了一个初级的方法](https://gist.github.com/slevithan/2387872),并可以[合并到xregexp](https://github.com/beaugunderson/xregexp-lookbehind),它利用`?:`规则简单实现了compile/exec/test，以及search/match/replace/split，且不支持非后行断言起始或多组后行断言。
+```
+String.prototype.reverse = function () {
+	return this.split('').reverse().join('');
+};
+// Mimicking lookbehind like (?<=es)t
+var output = 'testt'.reverse().replace(/t(?=se)/g, 'x').reverse();
+// output: tesxt
+```
 XRegExp的创建者Steven Levithan在[2007年的Blog中提到几个实现方法](http://blog.stevenlevithan.com/archives/mimic-lookbehind-javascript/)，其中捕获组包括`?:`和`reverse->先行断言->reverse`之类的。
 
 ps.在测试过程中偶然发现一个有趣的对比(较早来源[Laruence](http://www.laruence.com/2009/09/27/1123.html)):
 ```
 console.time();/^(t+)+\1$/.exec("tttttttttttttttttttttttttttest");console.timeEnd();
-Chrome/54.0.2840.98 default: 1.36e+03ms
-Safari/10.0.1       default: 48.115ms
-FireFox/49.0        default: 1451ms
+Chrome/54.0.2840.98                default: 1.36e+03ms
+Safari/10.0.1                      default: 48.115ms
+FireFox/49.0(并不支持console.time)  default: 1451ms
 ```
 同样采用NFA类型的正则引擎，JavaScriptCore与V8在这点优化上，差别那么大，有点意外；看来在，backtracking和lazy上应该有区别，有时间好看看它们之间算法；并且如果测试的字符串再长点，Chrome 就直接卡住，并且不会内存溢出，CPU温度直接飙到85摄氏度，Chrome任务管理器的当前页面进程直接100%。
