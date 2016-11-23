@@ -11,7 +11,7 @@ feature:
 * (?<!pattern)	零宽负向后行断言(zero-width negative lookbehind assertion)
 
 ## 后行断言
-JavaScript的正则表达式并不支持后行断言（也有叫后顾或反向预查），一直以来有个问题，就是没有正常版的正则规则之一：后行断言(RegExp Lookbehind Assertions)，毕竟在ECMA 262 [5.1](http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.8)/[6.0](http://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-canonicalize-ch)/[7.0](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-runtime-semantics-canonicalize-ch)中完全没有提及，在2015年底至2016年初，也有提议在TC39讨论加入ECMA-262草案中，其[原因](http://stackoverflow.com/questions/12273112/will-js-regex-ever-get-lookbehind)`据说是早起ECMAScript3引入正则的时候，ECMAScript3已经相对稳定，参考Perl的正则，当时Perld的也正在实验`。虽然原因有点含糊其辞，但不可能是有人以讹传讹说后行断言（任意模式）性能问题过于占用CPU资源。虽然连ECMA-262 7.0都没有加上标准，但是在2016年年初，[V8引擎](http://v8project.blogspot.com/2016/02/regexp-lookbehind-assertions.html)在4.9(--harmony)以及之后版本均已先行实现，当然也包括从Chrome 49开始在开启about:flags中【实验性JavaScript】即可。
+JavaScript的正则表达式并不支持后行断言（也有叫后顾或反向预查），一直以来有个问题，就是没有正常版的正则规则之一：后行断言(RegExp Lookbehind Assertions)，毕竟在ECMA 262 [5.1](http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.8)/[6.0](http://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-canonicalize-ch)/[7.0](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-runtime-semantics-canonicalize-ch)中完全没有提及，在2015年底至2016年初，也有提议在TC39讨论加入ECMA-262草案中，其[原因](http://stackoverflow.com/questions/12273112/will-js-regex-ever-get-lookbehind)`据说是早起ECMAScript3引入正则的时候，ECMAScript3已经相对稳定，参考Perl的正则，当时Perl的也正在实验`。虽然原因有点含糊其辞，但不可能是有人以讹传讹说后行断言（任意模式）性能问题过于占用CPU资源。虽然连ECMA-262 7.0都没有加上标准，但是在2016年年初，[V8引擎](http://v8project.blogspot.com/2016/02/regexp-lookbehind-assertions.html)在4.9(--harmony)以及之后版本均已先行实现，当然也包括从Chrome 49开始在开启about:flags中【实验性JavaScript】即可。
 
 Mac:
 ```
