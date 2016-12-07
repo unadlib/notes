@@ -50,3 +50,9 @@ sudo gem install compass
 sudo languagesetup
 ```
 选择中文序号,无需重启.
+### iCloud同步WebStorm
+```
+WebStorm 2016.3默认的配置文件存储路径：/Users/[username]/Library/Preferences/WebStorm2016.3
+/Applications/WebStorm.app/Contents/bin/idea.properties文件尾添加
+idea.config.path=/Users/[username]/Library/Mobile\ Documents/com\~apple\~CloudDocs/Webstorm
+```
