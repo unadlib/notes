@@ -6,6 +6,11 @@ tags: [macOS]
 toc: 
 feature: 
 ---
+### Docker环境一致性开发
+由于Node.js并不像Python之类的有Virtual environment.因此在开发环境一致性只能利用Docker.
+```shell
+docker run -v `pwd`:/node -p 3000:3000 -p 5858:5858 -w /node/temp --name basenode -d git.xxx.com:5000/basenode node ./bin/www --debug=5858
+```
 ### 安全性和隐私->"任何来源"
 ```
 打开终端，执行sudo spctl --master-disable即可
