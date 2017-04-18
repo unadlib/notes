@@ -50,7 +50,7 @@ brew install proxychains-ng
 ```
 sudo gem install compass
 ```
-### 小版本更新后登陆节目英文
+### macOS 小版本更新后英文登陆
 ```
 sudo languagesetup
 ```
