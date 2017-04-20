@@ -61,3 +61,7 @@ WebStorm 2016.3为例，默认的配置文件存储路径：/Users/[username]/Li
 /Applications/WebStorm.app/Contents/bin/idea.properties文件尾添加
 idea.config.path=/Users/[username]/Library/Mobile\ Documents/com\~apple\~CloudDocs/Webstorm
 ```
+### git日志追溯
+```base
+git log --reverse -p
+```
