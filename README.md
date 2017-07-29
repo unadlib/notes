@@ -15,7 +15,7 @@ git clone https://github.com/unadlib/hexo-theme-next themes/next
 ```
 
 ## Update Note
-```
+```bash
 `npm bin`/hexo clean && `npm bin`/hexo g -d
 # if npm version >= 5.2.0
 npx hexo clean && npx hexo g -d
