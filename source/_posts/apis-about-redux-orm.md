@@ -1,4 +1,4 @@
-title: 翻译Redux-ORM APIs中文说明
+title: 翻译Redux-ORM APIs文档
 date: 2017-08-27 15:09:00
 description: 
 categories: 
