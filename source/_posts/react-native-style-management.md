@@ -105,15 +105,15 @@ const style = {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "$.mainColor",
+        backgroundColor: "$mainColor",
         welcome: {
-            fontSize: "$.fontSize",
-            textAlign: '$.alignItems',
-            margin: "$.grid",
+            fontSize: "$fontSize",
+            textAlign: '$alignItems',
+            margin: "$grid",
         },
         instructions: {
-            textAlign: '$.alignItems',
-            color: '$.textColor',
+            textAlign: '$alignItems',
+            color: '$textColor',
         },
     },
 };

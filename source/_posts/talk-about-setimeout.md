@@ -230,8 +230,8 @@ setTimeout(function(...arg){console.log(arg)}.bind(this,...arg),0);
 ```
 #### 自调用函数
 ```javascript
-setTimeout(function test(){console.log(test)},0,...arg);
-setTimeout(function(){console.log(arguments.callee)},0);
+setTimeout(function test(){console.log(test)});
+setTimeout(function(){console.log(arguments.callee)});
 ```
 #### 代码字符串
 ```javascript
