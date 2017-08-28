@@ -188,7 +188,7 @@ setTimeout(function(){
     console.log(1)
 })
 ```
-由于Javascript执行是单线程，因此，当代码同步执行时阻塞耗时超过之前已队列的定时器的定时时间则优先执行,注意Node.js异步非阻塞式，因此一定会先打印`1`。
+由于Javascript执行是单线程，因此，当代码同步执行时阻塞耗时超过之前已队列的定时器的定时时间则优先执行。
 
 
 ```javascript
