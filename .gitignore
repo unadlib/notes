@@ -8,7 +8,7 @@ public/
 .idea/
 .idea/*
 .idea*
-themes/next/
+themes
 .idea/notes.iml
 
 .idea/jsLibraryMappings.xml
