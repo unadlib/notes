@@ -1,7 +1,6 @@
 ---
 title: Explore a more complete front-end testing strategy
 date: 2019-01-03 19:36:15
-tags:
 ---
 
 > The assumption in this article is that we are continuously developing a relatively large front-end project, and we have adopted a domain-driven design, as well as an object-oriented programming model. The front-end business logic is split into **`domain modules`**/**`UI components`**. So we may need to have a more complete testing strategy to assure such a front-end project.
@@ -177,7 +176,6 @@ Feature: AC
 Example for testing
 
 ```javascript
-
 // E2E & IT3
 test(() => {
     const app = getApp();
