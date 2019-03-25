@@ -3,7 +3,7 @@ title: Practice OOP to front-end universal state module with Redux/MobX/Vuex
 date: 2019-03-25 19:30:00
 ---
 
-![architecture](https://raw.githubusercontent.com/unadlib/notes/master/assets/2019-02-25-practice-oop-to-front-end-universal-state-module/architecture.jpg)
+![architecture](/assets/2019-02-25-practice-oop-to-front-end-universal-state-module/architecture.jpg)
 
 > This is a proposal of an universal state management module design rooted in the OOP paradigm.
 
@@ -191,7 +191,7 @@ class Shop extends Module {
 
 The order in which they are run is shown in the following flow chart:
 
-![lifecycle](https://raw.githubusercontent.com/unadlib/notes/master/upload/2019-02-25-practice-oop-to-front-end-universal-state-module/usm_lifecycle.png)
+![lifecycle](/assets/2019-02-25-practice-oop-to-front-end-universal-state-module/usm_lifecycle.png)
 
 These module lifecycles can be used to coordinate module initialization dependencies.
 
@@ -264,7 +264,7 @@ App -> moduleDidInitialize pending: false ready: true
 
 ### An ideal architecture
 
-![flow chart](https://raw.githubusercontent.com/unadlib/notes/master/upload/2019-02-25-practice-oop-to-front-end-universal-state-module/flow_chart.png)
+![flow chart](/assets/2019-02-25-practice-oop-to-front-end-universal-state-module/flow_chart.png)
 
 In a complex front-end application, a typical modular architecture may contain the following:
 

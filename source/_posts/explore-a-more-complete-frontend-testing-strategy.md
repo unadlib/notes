@@ -9,7 +9,7 @@ date: 2019-01-03 19:36:15
 
 Whether it's a traditional test model or a continuous delivery model, we typically define the following three types of tests:
 
-![generic-test](https://raw.githubusercontent.com/unadlib/notes/master/upload/2018-12-18-blog-a-more-complete-front-end-testing-strategy/generic-test.png)
+![generic-test](/assets/2018-12-18-blog-a-more-complete-front-end-testing-strategy/generic-test.png)
 
 - E2E
 
@@ -57,7 +57,7 @@ Among the issues we mentioned for some test strategies, based on our ATDD sustai
 
 ## Propose a more complete testing strategy
 
-![new-test-strategy](https://raw.githubusercontent.com/unadlib/notes/master/upload/2018-12-18-blog-a-more-complete-front-end-testing-strategy/new-test-strategy.png)
+![new-test-strategy](/assets/2018-12-18-blog-a-more-complete-front-end-testing-strategy/new-test-strategy.png)
 
 - E2E
 
@@ -80,7 +80,7 @@ IT1 is just the minimum set of modules integration tests, it only requires the m
 In IT2 talking about testing problems with the underlying modules (less dependent modules or non-dependent modules), we recommend that such modules be suitable for more complete UT, especially core functions, and that the core modules of other modules, or helper functions, can be considered for unit testing, and that in many cases, Can help AC cover more examples. It is an important addition to IT1/IT2/IT3.
 
 
-![it-cover](https://raw.githubusercontent.com/unadlib/notes/master/upload/2018-12-18-blog-a-more-complete-front-end-testing-strategy/it-cover.png)
+![it-cover](/assets/2018-12-18-blog-a-more-complete-front-end-testing-strategy/it-cover.png)
 
 Among the different test types, the test factors covered are also different. Then we hope that with such a test strategy can be more complete and efficient to meet the various factors of testing: The E2E test covers almost all of the test factors, IT3 is less than E2E real server APIs and real browsers, IT2 is less than T3 a number of non-essential modules and UI components, IT1 has fewer UI components than IT2, and UT only covers a small number of core logical parts.
 
