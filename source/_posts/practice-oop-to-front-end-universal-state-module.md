@@ -41,7 +41,7 @@ Better front-end architecture design should be flexible and scalable. Especially
 
 Let's start with a typical Redux example of a counter:
 
-```js
+```javascript
 import { createStore } from 'redux';
 
 function counter(state = 0, action) {
@@ -63,7 +63,7 @@ store.dispatch({ type: 'DECREMENT' })
 
 USM supports Redux, MobX, Vuex and Angular. It provides `usm`, `usm-redux`, `usm-mobx` and `usm-vuex` packages. Here is the same counter using `usm-redux`:
 
-```js
+```javascript
 import Module, { state, action } from 'usm-redux';
 
 class Counter extends Module {
@@ -92,7 +92,7 @@ USM has four sub-packages, namly `usm`, `usm-redux`, `usm-mobx` and `usm-vuex`. 
 
 The following code demonstrate how the `usm-redux` module can be used with the connector from `react-redux`:
 
-```js
+```javascript
 // index.js
 export const counter = Counter.create();
 
@@ -104,7 +104,7 @@ ReactDOM.render(
 );
 ```
 
-```js
+```javascript
 // app.js
 import { connect } from 'react-redux';
 import { counter } from './';
@@ -123,7 +123,7 @@ export default connect(
 And here is the same counter working with `mobx-react` using `usm-mobx`:
 
 
-```js
+```javascript
 // index.js
 
 export const counter = Counter.create();
@@ -135,7 +135,7 @@ ReactDOM.render(
 ```
 
 
-```js
+```javascript
 // app.js
 import { observer } from 'mobx-react';
 import { counter } from './';
@@ -165,7 +165,7 @@ The use of `usm-redux` and `usm-mobx` to connect with `react-redux` and `mobx-re
 
 `usm` provides decorator `@state` to wrap a variable with a state, and decorator `@action` is used to wrap a function that changes state.
 
-```js
+```javascript
 class Shop extends Module {
   @state goods = [];
   @state status = 'close';
@@ -195,7 +195,7 @@ The order in which they are run is shown in the following flow chart:
 
 These module lifecycles can be used to coordinate module initialization dependencies.
 
-```js
+```javascript
 class TodoList extends Module {  
   async moduleWillInitialize() {
     console.log(

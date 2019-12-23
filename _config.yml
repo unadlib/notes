@@ -40,10 +40,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
+  enable: false
 
 # Category & Tag
 default_category: uncategorized
@@ -70,5 +67,5 @@ theme: attraction
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/unadlib/unadlib.github.io.git
+  repository: git@github.com:unadlib/unadlib.github.io.git
   branch: master
