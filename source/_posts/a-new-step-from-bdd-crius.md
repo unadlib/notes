@@ -36,14 +36,14 @@ class AddTodoItem extends Step {
     | 'crius'    | { obj: 'hello' }   |
   `
 
-  //which is equivalent to
-  @examples([{
-      todo: 'learning',
-      object: { obj: 'literal' }
-  }, {
-      todo: 'crius',
-      object: { obj: 'hello' }
-  }])
+  //which is equivalent to:
+  // @examples([{
+  //     todo: 'learning',
+  //     object: { obj: 'literal' }
+  // }, {
+  //     todo: 'crius',
+  //     object: { obj: 'hello' }
+  // }])
 
   run() {
 
@@ -53,11 +53,11 @@ class AddTodoItem extends Step {
       <Scenario desc='User login website' action={Login}>
         <Given desc='User navigate to todo list' action={Navigate} />
 
-        // Allow Step class AddTodo to be used as an action to promote re-use
+        { /* Allow Step class AddTodo to be used as an action to promote re-use */ }
         <When desc='User type ${todo} in input field and click "add" button' action={AddTodo} />
         <Then desc='User should see ${todo} item in todo list' action={CheckTodo} />
 
-        // action is optional
+        { /* action is optional */ }
         <Then desc='Just an description' />
       </Scenario>
     )
