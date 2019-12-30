@@ -6,7 +6,7 @@ BDD (behavior-driven development) is an extension of TDD (test-driven developmen
 
 ## Motivation
 
-![BDD](/integration-blog/assets/2019-12-08-a-new-step-from-bdd-crius/bdd.png)
+![BDD](assets/2019-12-08-a-new-step-from-bdd-crius/bdd.png)
 
 A typical BDD development process begins with Epics, these Epics are then broken down into User Stories to describe the various features of the application. From User Stories, AC (Acceptance Criteria) will be listed to clearly define the behaviors and specifications of the feature. Because AC precisely defined the behaviors and test conditions for all the features of the application, they are perfect for writing into automated tests.
 
