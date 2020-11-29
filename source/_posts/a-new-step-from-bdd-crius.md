@@ -24,7 +24,7 @@ These shortcomings eventually led to the advent of Crius.
 
 Crius is our answer to Cucumber. Let's see some example code:
 
-```jsx
+```tsx
 @autorun(test)
 @title('User add ${todo} item in todo list')
 class AddTodoItem extends Step {

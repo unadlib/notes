@@ -31,7 +31,7 @@ Reactant is a progressive framework. In the process of developing applications f
 
 React advocates immutable state type management, and Redux clearly fits this. But the fact is that simple mutation update operations like MobX are increasingly in line with current trends. Therefore Reactant provides a new immutable state management model based on Redux and Immer, which incorporates similar API elements of MobX. And more importantly, it still maintains the immutability of state.
 
-```ts
+```typescript
 @injectable()
 class TodoList {
   @state
